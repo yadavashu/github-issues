@@ -6,7 +6,17 @@ import  "./App.css";
 import IssuesList from "./components/issues-list.component";
 import CreateIssue from "./components/create-issue.component";
 class App extends Component {
+  state={
+    show:false
+  };
+  showModal =e=>{
+    this.setState({
+      show:!this.state.show
+    });
+  }
   render() {
+    
+
     return (
       <Router>
         <div className="container">
@@ -18,21 +28,21 @@ class App extends Component {
   <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div className="navbar-nav">
     <li className="nav-item dropdown">
-    <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <Link to="/" className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       <img src={filter}></img>Filter
-    </a>
+    </Link>
     <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-      <a className="dropdown-item" href="#">Show all</a>
-      <a className="dropdown-item" href="#">Open</a>
-      <a className="dropdown-item" href="#">Closed</a>
+      <Link to="/" className="dropdown-item" href="#">Show all</Link>
+      <Link to="/" className="dropdown-item" href="#">Open</Link>
+      <Link to="/" className="dropdown-item" href="#">Closed</Link>
      </div>
   </li>
-      <a className="nav-link" href="#"><button>Create Todo</button></a>
+      <button onClick={this.showModal}>Create Todo</button>
     </div>
   </div>
 </nav>
           <Route path="/" exact component={IssuesList} />
-          <Route path="/create"  component={CreateIssue} />
+          <CreateIssue onClose={this.showModal} show={this.state.show} />
         </div>
       </Router>
     );
