@@ -16,7 +16,7 @@ export default class IssuesList extends Component {
     }
     componentDidMount()
     {
-        axios.get('http://localhost:8000/listissues')
+        axios.get('http://localhost:8000/closeissue')
         .then((res)=>{
             console.log(res.data);
            this.setState({

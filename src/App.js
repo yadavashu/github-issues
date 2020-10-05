@@ -5,6 +5,9 @@ import filter from "./filter.svg";
 import  "./App.css";
 import IssuesList from "./components/issues-list.component";
 import CreateIssue from "./components/create-issue.component";
+import editIssue from "./components/edit-issue.component";
+import OpenIssues from "./components/open-issues.component";
+import CloseIssues from "./components/closeissues.component";
 class App extends Component {
   state={
     show:false
@@ -33,8 +36,8 @@ class App extends Component {
     </Link>
     <div className="dropdown-menu" aria-labelledby="navbarDropdown">
       <Link to="/" className="dropdown-item" href="#">Show all</Link>
-      <Link to="/" className="dropdown-item" href="#">Open</Link>
-      <Link to="/" className="dropdown-item" href="#">Closed</Link>
+      <Link to="/open" className="dropdown-item" href="#">Open</Link>
+      <Link to="/close" className="dropdown-item" href="#">Closed</Link>
      </div>
   </li>
       <button onClick={this.showModal}>Create Todo</button>
@@ -42,6 +45,9 @@ class App extends Component {
   </div>
 </nav>
           <Route path="/" exact component={IssuesList} />
+          <Route path="/close"  component={CloseIssues} />
+          <Route path="/open"  component={OpenIssues} />
+          <Route path="/edit/:id" component={editIssue} />
           <CreateIssue onClose={this.showModal} show={this.state.show} />
         </div>
       </Router>
