@@ -1,0 +1,33 @@
+.modal-box{
+    background-color: lightblue;
+    width:50%;
+    margin:0 auto;
+    height:20rem;
+    border-radius:5px;
+}
+
+.form-check{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.form-in{
+    margin-top:50%;
+}
+.form-in button{
+    margin-top:10px;
+    margin-left:28%;
+}
+#img3{
+    width:25px;
+}
+#modal-cross{
+border:none;
+background-color: lightblue;
+position:relative;
+top:-160px;
+left:90%;
+
+}

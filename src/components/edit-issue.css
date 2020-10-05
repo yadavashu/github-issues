@@ -1,0 +1,43 @@
+.issue-desc{
+    background-color: lightblue;
+    margin-top:10px;
+    border-radius:6px;
+    height:10rem;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.issue-desc p{
+    font-size:1.5rem;
+    font-weight: bold;
+}
+.issue-btn{
+    
+    width:22%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.issue-btn button{
+    outline:none;
+    border-width:0.5px;
+    border-radius:5px;
+    text-decoration: none;
+}
+
+.issue-btn button a{
+    outline:none;
+    border-width:0.5px;
+    border-radius:5px;
+    text-decoration: none;
+}
+
+.issue-btn button:hover{
+    background-color: lightblue;
+}
+
+
+
+

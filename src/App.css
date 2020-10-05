@@ -1,6 +1,32 @@
-img
+#img2
 {
-width:20px;
+width:35px;
+}
+#img1
+{
+width:25px;
+}
+.navbar{
+  margin-top:10%;
+}
+.contents{
+  margin:0 auto;
+  padding:5px 100px 5px 0px;
+}
+#modal{
+  border:solid;
+  border-radius:10px;
+  border-width:0.5px;
+  border-color: #47ccde;
+  outline:none;
+}
+
+#modal:hover{
+  background-color:lightblue;
+}
+
+.options-filter{
+font-size:20px;
 }
 .pagination {
     margin: 15px auto;

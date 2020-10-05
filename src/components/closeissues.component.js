@@ -64,7 +64,7 @@ export default class IssuesList extends Component {
               <thead>
               <tr>
               <th>Issues</th>
-              <th>Action</th>
+            
               </tr>
               </thead>
               <tbody>

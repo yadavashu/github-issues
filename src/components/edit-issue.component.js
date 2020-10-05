@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-
+import './edit-issue.css'
 export default class editIssue extends Component {
 
     state={
@@ -47,10 +47,12 @@ export default class editIssue extends Component {
     render() {
        
         return (
-            <div>
+            <div className="issue-desc">
             <p>{this.state.issue_desc}</p>
+            <div className="issue-btn">
             <button onClick={this.close}><Link to={"/"}>Close Issue</Link></button>
             <button onClick={this.delet}><Link to={"/"}>Delete Issue</Link></button>
+            </div>
             </div>
         )
     }
