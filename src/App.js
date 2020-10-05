@@ -17,6 +17,7 @@ class App extends Component {
       show:!this.state.show
     });
   }
+
   render() {
     
 
@@ -49,6 +50,7 @@ class App extends Component {
           <Route path="/open"  component={OpenIssues} />
           <Route path="/edit/:id" component={editIssue} />
           <CreateIssue onClose={this.showModal} show={this.state.show} />
+          
         </div>
       </Router>
     );
