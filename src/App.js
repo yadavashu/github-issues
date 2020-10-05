@@ -44,12 +44,13 @@ class App extends Component {
       <button onClick={this.showModal} id="modal">Create Todo</button>
     </div>
   </div>
-</nav>
+</nav>    
+<CreateIssue onClose={this.showModal} show={this.state.show}  className=" letsee"/>
           <Route path="/" exact component={IssuesList} />
           <Route path="/close"  component={CloseIssues} />
           <Route path="/open"  component={OpenIssues} />
           <Route path="/edit/:id" component={editIssue} />
-          <CreateIssue onClose={this.showModal} show={this.state.show} />
+         
           
         </div>
       </Router>
